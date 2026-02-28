@@ -15,22 +15,32 @@
             <h1> Inicio de sesión </h1>
             <p>Ingrese sus credenciales para continuar</p>
         
-            <form>
-            <div>
-                <h2> Usuario </h2>
-                <input type="text" placeholder="Ingrese su usuario" required />
-            </div>
-            <div>
-                <h2> Contraseña </h2>
-                <input type="password" placeholder="Ingrese su contraseña" required />
-            </div>
-            <div>
-                <p>¿No tienes cuenta? <a href="#">Regístrate aquí</a></p>
-            </div>
+            <form id ="loginForm">
+                <div>
+                    <h2> Usuario </h2>
+                    <input id="usernameInput" type="text" placeholder="Ingrese su usuario" required />
+                </div>
+                <div>
+                    <h2> Contraseña </h2>
+                    <input id="passwordInput" type="password" placeholder="Ingrese su contraseña" required />
+                </div>
+                <br>
+
+                <div>
+                    <button type="submit">Iniciar sesión</button>
+                </div>
+
+                <div id="statusMessage" style="margin-top: 15px; font-weight: bold;"></div>
+
+                <div>
+                    <p>¿No tienes cuenta? <a href="../L_Register/register.html">Regístrate aquí</a></p>
+                </div>
 
             </form>  
 
         </div> 
+
+        <script src="login.js"></script>
 
     </body>
 

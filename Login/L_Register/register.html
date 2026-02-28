@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Registro</title>
+    </head>
+
+    <body>
+
+        <div class="form-container" align="center">
+            <h1> Registro </h1>
+            <p>Crea una cuenta nueva</p>
+            
+            <form id="registerForm">
+                <div>
+                    <h2> Usuario </h2>
+                    <input type="text" id="usernameInput" placeholder="Ingrese un usuario" required />
+                </div>
+                <div>
+                    <h2> Contraseña </h2>
+                    <input type="password" id="passwordInput" placeholder="Ingrese una contraseña" required />
+                </div>
+                <br>
+                <div>
+                    <button type="submit">Registrarse</button>
+                </div>
+                
+                <div id="statusMessage" style="margin-top: 15px; font-weight: bold;"></div>
+
+                <div>
+                    <p>¿Ya tienes cuenta? <a href="../L_Login/login.html">Inicia sesión aquí</a></p>
+                </div>
+            </form>  
+        </div> 
+
+        <script src="register.js"></script>
+
+    </body>
+
+</html>
