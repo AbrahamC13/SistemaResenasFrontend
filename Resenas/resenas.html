@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gestión de Reseñas</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Reseñas de Videojuegos</h1>
+
+        <div class="form-card">
+            <h2 id="formTitle">Agregar Nueva Reseña</h2>
+            <form id="resenaForm">
+                <input type="hidden" id="resenaId"/>
+                <div class="form-group">
+                    <label for="nombreJuego">Nombre del Juego</label>
+                    <input type="text" id="nombreJuego" placeholder="Ej. Minecraft" required/>
+                </div>
+                <div class="form-group">
+                    <label for="calificacion">Calificación (1-10)</label>
+                    <input type="number" id="calificacion" min="1" max="10" placeholder="10" required/>
+                </div>
+                <div class="form-group">
+                    <label for="comentarios">Comentario</label>
+                    <textarea id="comentario" rows="3" placeholder="Escribe tu opinión aquí..." required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="btnSubmit">Guardar Reseña</button>
+                    <button type="button" id="btnCancel" class="hidden btn-secondary">Cancelar Edición</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="list-card">
+            <h2>Reseñas Publicadas</h2>
+            <div id="resenasContainer" class="grid-container">
+                <p>Cargando reseñas...</p>
+            </div>
+        </div>
+
+        <script type="module" src="js/main.js"></script>
+    </div>
+</body>
+</html>
