@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo de Videojuegos</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="page-title">
+      <div>
+        <h1>Catálogo de Videojuegos</h1>
+        <p class="page-subtitle">CRUD con fetch (GET/POST/PUT/PATCH/DELETE) y validaciones básicas</p>
+      </div>
+    </div>
+
+    <div id="statusMessage" class="hidden"></div>
+
+    <div class="grid">
+      <section class="card">
+        <h2 id="formTitle">Agregar Nuevo Videojuego</h2>
+
+        <form id="videojuegoForm">
+          <input type="hidden" id="videojuegoId" />
+
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" placeholder="Ej. The Witcher 3" maxlength="120" required />
+            <small id="nombreError" class="field-error hidden"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="genero">Género</label>
+            <input type="text" id="genero" placeholder="Ej. RPG" maxlength="80" />
+            <small id="generoError" class="field-error hidden"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="plataforma">Plataforma</label>
+            <input type="text" id="plataforma" placeholder="Ej. PC / PS5 / Switch" maxlength="80" />
+            <small id="plataformaError" class="field-error hidden"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="anio">Año</label>
+            <input type="number" id="anio" placeholder="Ej. 2015" min="1950" max="2100" />
+            <small id="anioError" class="field-error hidden"></small>
+          </div>
+
+          <div class="actions">
+            <button id="btnSubmit" type="submit" class="btn-primary">Guardar</button>
+            <button id="btnCancel" type="button" class="btn-secondary hidden">Cancelar</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="list-header">
+          <h2>Lista</h2>
+          <button id="btnReload" type="button" class="btn-secondary">Recargar</button>
+        </div>
+
+        <input id="searchInput" class="search" type="text" placeholder="Buscar por nombre / género / plataforma..." />
+
+        <div id="videojuegosContainer" class="list" style="margin-top:12px;"></div>
+      </section>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
