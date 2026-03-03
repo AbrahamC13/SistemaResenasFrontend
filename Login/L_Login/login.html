@@ -10,38 +10,48 @@
 
     <body>
 
-        <div class="form" align="center">
+        <div class="card">
 
-            <h1> Inicio de sesión </h1>
-            <p>Ingrese sus credenciales para continuar</p>
-        
-            <form id ="loginForm">
-                <div>
-                    <h2> Usuario </h2>
-                    <input id="usernameInput" type="text" placeholder="Ingrese su usuario" required />
-                </div>
-                <div>
-                    <h2> Contraseña </h2>
-                    <input id="passwordInput" type="password" placeholder="Ingrese su contraseña" required />
-                </div>
-                <br>
+            <div class="topForm">
+                <h1>Inicio de sesión</h1>
+                <p>Ingrese sus credenciales para continuar</p>
+            </div>
 
-                <div>
-                    <button type="submit">Iniciar sesión</button>
-                </div>
+            <div class="centerForm">
+                <form id="loginForm" class="loginForm">
 
-                <div id="statusMessage" style="margin-top: 15px; font-weight: bold;"></div>
+                    <div>
+                        <h2>Usuario</h2>
+                        <input type="text" id="usernameInput" placeholder="Ingrese su usuario" required>
+                    </div>
 
-                <div>
-                    <p>¿No tienes cuenta? <a href="../L_Register/register.html">Regístrate aquí</a></p>
-                </div>
+                    <div>
+                        <h2>Contraseña</h2>
+                        <input type="password" id="passwordInput" placeholder="Ingrese su contraseña" required>
+                    </div>
 
-            </form>  
+                </form>
+            </div>
 
-        </div> 
+            <div class="bottomForm">
+
+                    <div>
+                        <button type="submit" form="loginForm">Iniciar sesión</button>
+                    </div>
+
+                    <p id="statusMessage" class="statusMessage"></p>
+
+                    <div>
+                        <p>¿No tienes cuenta? 
+                            <a href="../L_Register/register.html">Regístrate aquí</a>
+                        </p>
+                    </div>
+
+            </div>
+
+        </div>
 
         <script src="login.js"></script>
-
     </body>
 
 </html>

@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    font-family: Arial, sans-serif;
+    background: linear-gradient(0deg, #047288, #6dffdd); 
+}
+
+.card {
+    width: 400px;
+    height: 580px;
+    background: white;
+    border-radius: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.topForm {
+    text-align: center;
+    width: 100%;
+}
+
+.centerForm {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.bottomForm {
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.registerForm {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registerForm div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.statusMessage {
+    height: 20px; 
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.3s ease; 
+}
+
+h1 {
+    color: #047288; 
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    min-width: 200px;
+    padding: 10px;
+    cursor: pointer;
+    background: linear-gradient(100deg, #6dffdd, #047288); 
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    color: #111;
+}

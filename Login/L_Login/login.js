@@ -16,6 +16,8 @@ ui.loginForm.addEventListener('submit', async (event) => {
     const inputUsername = ui.usernameInput.value.trim();
     const inputPassword = ui.passwordInput.value.trim();
 
+    showMessage("Validando credenciales...", "black");
+
     try {
         const response = await fetch(API_URL, {
             method: 'GET'
@@ -33,8 +35,7 @@ ui.loginForm.addEventListener('submit', async (event) => {
 
         if (foundUser) {
             if (foundUser.activo) {
-                ui.statusMessage.textContent = "¡Inicio de sesión exitoso! Redirigiendo...";
-                ui.statusMessage.style.color = "green";
+                showMessage("¡Inicio de sesión exitoso! Redirigiendo...", "green");
                 
                 localStorage.setItem('loggedUser', JSON.stringify(foundUser));
 
@@ -43,17 +44,19 @@ ui.loginForm.addEventListener('submit', async (event) => {
                 }, 1000);
 
             } else {
-                ui.statusMessage.textContent = "Error: Esta cuenta se encuentra suspendida.";
-                ui.statusMessage.style.color = "orange";
+                showMessage("Error: Esta cuenta se encuentra suspendida.", "orange");
             }
         } else {
-            ui.statusMessage.textContent = "Error: Usuario o contraseña incorrectos.";
-            ui.statusMessage.style.color = "red";
+            showMessage("Error: Usuario o contraseña incorrectos.", "red");
         }
 
     } catch (error) {
         console.error('Error in request:', error);
-        ui.statusMessage.textContent = "Error grave: No se pudo conectar con el servidor.";
-        ui.statusMessage.style.color = "red";
+        showMessage("Error grave: No se pudo conectar con el servidor.", "red");
     }
 });
+
+function showMessage(text, color) {
+    ui.statusMessage.textContent = text;
+    ui.statusMessage.style.color = color;
+}

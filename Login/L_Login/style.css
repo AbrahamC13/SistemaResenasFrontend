@@ -1,17 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
     font-family: Arial, sans-serif;
-    background: linear-gradient(0deg, #0d259e, #48adff);
+    background: linear-gradient(0deg, #320488, #6dceff);
+}
+
+.container{
+    display:flex;
     height: 100vh;
 }
 
-.form{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
+.background{
+    flex:0 0 60%;
+}
+
+.card{
+    width: 400px;
+    height: 500px;
     background: white;
     border-radius: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    align-items: center;
 }
+
+.topForm{
+    text-align: center;
+}
+
+.centerForm{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottomForm{
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginForm {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginForm div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.statusMessage {
+    height: 20px; 
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.3s ease; 
+}
+
+h1{
+    color: #280045;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width:100%;
+    padding: 10px;
+    cursor: pointer;
+    background: linear-gradient(100deg, #b3fff4, #48adff);
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    color: #111;
+}
+

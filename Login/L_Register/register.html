@@ -10,34 +10,47 @@
 
     <body>
 
-        <div class="form-container" align="center">
-            <h1> Registro </h1>
-            <p>Crea una cuenta nueva</p>
-            
-            <form id="registerForm">
+        <div class="card">
+
+            <div class="topForm">
+                <h1>Registro</h1>
+                <p>Crea una cuenta nueva</p>
+            </div>
+
+            <div class="centerForm">
+                <form id="registerForm" class="registerForm">
+                    <div>
+                        <h2>Usuario</h2>
+                        <input type="text" id="usernameInput" placeholder="Ingrese un usuario" required />
+                    </div>
+                    <div>
+                        <h2>Contraseña</h2>
+                        <input type="password" id="passwordInput" placeholder="Ingrese una contraseña" required />
+                    </div>
+                    <div>
+                        <h2>Confirmar Contraseña</h2>
+                        <input type="password" id="confirmPasswordInput" placeholder="Repita su contraseña" required />
+                    </div>
+                </form>
+            </div>
+
+            <div class="bottomForm">
                 <div>
-                    <h2> Usuario </h2>
-                    <input type="text" id="usernameInput" placeholder="Ingrese un usuario" required />
-                </div>
-                <div>
-                    <h2> Contraseña </h2>
-                    <input type="password" id="passwordInput" placeholder="Ingrese una contraseña" required />
-                </div>
-                <br>
-                <div>
-                    <button type="submit">Registrarse</button>
+                    <button type="submit" form="registerForm">Registrarse</button>
                 </div>
                 
-                <div id="statusMessage" style="margin-top: 15px; font-weight: bold;"></div>
+                <p id="statusMessage" class="statusMessage"></p>
 
                 <div>
-                    <p>¿Ya tienes cuenta? <a href="../L_Login/login.html">Inicia sesión aquí</a></p>
+                    <p>¿Ya tienes cuenta? 
+                        <a href="../L_Login/login.html">Inicia sesión aquí</a>
+                    </p>
                 </div>
-            </form>  
+            </div>
+
         </div> 
 
         <script src="register.js"></script>
-
     </body>
 
 </html>
