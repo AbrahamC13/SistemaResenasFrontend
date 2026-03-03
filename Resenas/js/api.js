@@ -37,11 +37,7 @@ async function handleResponse(response) {
 export async function getResenas() {
     const urlWithoutCache = `${API_URL}?_t=${new Date().getTime()}`;
     const response = await fetch(urlWithoutCache, {
-        method: 'GET',
-        headers: { 
-            'Cache-Control': 'no-cache',
-            'Pragma': 'no-cache'
-        }
+        method: 'GET'
     });
     return handleResponse(response);
 }
