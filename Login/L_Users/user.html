@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" />
+        <title>Administrar Usuarios</title>
+    </head>
+
+    <body>
+
+        <div class="mainContainer">
+            <div class="formSection card">
+                <h1 id="formTitle">Editar Usuario</h1>
+                <p>Seleccione en la tabla para cambiar la contraseña de un usuario.</p>
+                
+                <div id="statusMessage" class="statusMessage hidden"></div>
+
+                <form id="userForm">
+                    <div class="inputGroup">
+                        <h2>Usuario Seleccionado</h2>
+                        <input type="text" id="usernameInput" placeholder="Seleccione un usuario..." disabled required>
+                    </div>
+                    <div class="inputGroup">
+                        <h2>Nueva Contraseña</h2>
+                        <input type="password" id="passwordInput" placeholder="Ingrese nueva contraseña" disabled required>
+                    </div>
+                    
+                    <div class="buttonGroup">
+                        <button type="submit" id="btnSubmit" class="btnPrimary" disabled>Actualizar Contraseña</button>
+                        <button type="button" id="btnCancel" class="btnWarning hidden">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="tableSection card">
+                <h1>Lista de Usuarios</h1>
+                <p>Gestión de cuentas en el sistema de reseñas.</p>
+                
+                <table class="usersTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="users.js"></script>
+    </body>
+</html>

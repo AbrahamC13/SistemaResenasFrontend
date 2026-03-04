@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    background: linear-gradient(0deg, #047288, #6dffdd);
+    padding: 20px;
+}
+
+.mainContainer {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    height: 85vh; 
+}
+
+.card {
+    background: white;
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; 
+}
+
+.formSection {
+    flex: 1;
+}
+
+.tableSection {
+    flex: 2;
+}
+
+h1 {
+    color: #047288;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+    margin-top: 15px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input:disabled {
+    background-color: #f0f0f0;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.btnPrimary {
+    background: linear-gradient(100deg, #6dffdd, #047288);
+    color: #111;
+}
+
+.btnWarning {
+    background: #ffc107;
+    color: #111;
+}
+
+.btnDanger {
+    background: #dc3545;
+    color: white;
+}
+
+.usersTable {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 15px;
+}
+
+.usersTable th, .usersTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.usersTable th {
+    color: #047288;
+    border-bottom: 2px solid #047288;
+}
+
+
+.statusMessage {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.hidden {
+    display: none;
+}

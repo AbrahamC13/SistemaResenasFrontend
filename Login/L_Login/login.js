@@ -4,7 +4,8 @@ const ui = {
     loginForm: document.getElementById('loginForm'),
     usernameInput: document.getElementById('usernameInput'),
     passwordInput: document.getElementById('passwordInput'),
-    statusMessage: document.getElementById('statusMessage')
+    statusMessage: document.getElementById('statusMessage'),
+    btnManageUsers: document.getElementById('btnManageUsers')
 }
 
 const API_URL = 'http://localhost:8089/usuarios';
@@ -54,6 +55,10 @@ ui.loginForm.addEventListener('submit', async (event) => {
         console.error('Error in request:', error);
         showMessage("Error grave: No se pudo conectar con el servidor.", "red");
     }
+});
+
+ui.btnManageUsers.addEventListener('click', () => {
+    window.location.href = "../L_Users/user.html"; 
 });
 
 function showMessage(text, color) {
